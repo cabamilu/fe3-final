@@ -1,0 +1,24 @@
+.theme-dark main, .theme-light main {
+    padding: 0.5rem 0 2rem 0;
+}
+
+.theme-light {
+    background-color: rgb(235, 235, 235);
+}
+
+.theme-light main {
+    background-color: white;
+}
+
+.theme-dark { 
+    background-color: #212934;
+    color: #fff
+}
+
+.theme-dark a, .theme-dark button {
+    color: #fff
+}
+
+.theme-dark main {
+    background-color: rgb(65, 65, 65);
+}

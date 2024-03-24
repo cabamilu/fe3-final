@@ -1,0 +1,45 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(136, 136, 136);
+}
+
+
+.theme-button, .theme-button-dark {
+    border: none;
+    border-radius: 5px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.theme-button {
+    background-color: #212934;
+}
+
+.theme-button svg {
+    fill: white;
+}
+
+.theme-button-dark {
+    background-color: white;
+    color: #212934;
+}
+
+.theme-button-dark svg {
+    fill: #212934;
+}
+ 
