@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ContextProvider } from "./Components/utils/global.context";
+import ContextProvider from "./Components/utils/global.context";
 import Home from "./Routes/Home";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact";

@@ -8,14 +8,14 @@ import './Card.css'
 const Card = ({ name, username, id, isFavorite }) => {
   const { state, dispatch } = useAppStates()
 
-  const updateFavs = ()=>{
+  const updateFavs = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
     if (isFavorite) {
-      dispatch({ type: actions.REMOVE_FAVORITE, payload: id})
+      dispatch({ type: actions.REMOVE_FAVORITE, payload: id })
       return
     }
 
-    dispatch({ type: actions.ADD_FAVORITE, payload: id})
+    dispatch({ type: actions.ADD_FAVORITE, payload: { id, username, name }})
   }
 
   return (
@@ -31,7 +31,7 @@ const Card = ({ name, username, id, isFavorite }) => {
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         <button onClick={updateFavs} className={state.darkMode ? "fav-button-dark" : "fav-button"}>
-          {isFavorite ? <Trash /> :<Star />}
+          {isFavorite ? <Trash /> : <Star />}
         </button>
     </div>
   );

@@ -8,7 +8,7 @@ const initialState = {
     favs: []
 }
 
-export const ContextGlobal = createContext(undefined);
+const ContextGlobal = createContext();
 
 const appReducer = (state, action) => {
   switch (action.type) {
@@ -17,31 +17,20 @@ const appReducer = (state, action) => {
   case actions.TOGGLE_MODE:
       return {...state, darkMode: !state.darkMode}
   case actions.ADD_FAVORITE:
-      const alreadyAdded = state.favs.some((favId) => favId === action.payload)
-      const favsAdd = alreadyAdded ? state.favs :  [...state.favs, action.payload]
-
-      if (!alreadyAdded) saveFavsToLocalStorage(favsAdd)
-      
-      return {...state, favsAdd}
+      const alreadyAdded = state.favs.some((fav) => fav.id === action.payload.id)
+      const favsToAdd = alreadyAdded ? state.favs : [...state.favs, action.payload]      
+      return {...state, favs: favsToAdd}
   case actions.REMOVE_FAVORITE:
-    const favsRemove = state.favs.filter((favId) => favId != action.payload)
-
-    saveFavsToLocalStorage(favsRemove)
-
-    return {...state, favsRemove}
+    const favsRemove = state.favs.filter((fav) => fav.id !== action.payload)
+    return {...state, favs: favsRemove}
   default:
       return state
   }
 }
 
-const saveFavsToLocalStorage = (favs) => {
-  localStorage.setItem("favs", JSON.stringify(favs))
-}
-
 const getFavsFromLocalStorage = () => {
-  const favs = localStorage.getItem("favs")
-
-  return favs ? JSON.parse(favs) : []
+  const favs = JSON.parse(localStorage.getItem("favs"))
+  return favs || []
 }
 
 const stateInitializer = () => {
@@ -49,7 +38,7 @@ const stateInitializer = () => {
   return {...initialState, favs}
 }
 
-export const ContextProvider = ({children}) => {
+const ContextProvider = ({children}) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
   const [state, dispatch] = useReducer(appReducer, initialState, stateInitializer)
 
@@ -64,9 +53,15 @@ export const ContextProvider = ({children}) => {
       getAllDentists()
   }, [])
 
+  useEffect(() => {
+    localStorage.setItem("favs", JSON.stringify(state.favs))
+  }, [state.favs])
+
   return (
       <ContextGlobal.Provider value={data}>{children}</ContextGlobal.Provider>
   )
 }
+
+export default ContextProvider
 
 export const useAppStates = () => useContext(ContextGlobal)

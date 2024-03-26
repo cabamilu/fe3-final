@@ -4,11 +4,11 @@ import Card from '../Components/Card'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { state, dispatch } = useAppStates()
+  const { state } = useAppStates()
 
   return (
     <main className="" >
-      <h1>Home</h1>
+      <h1>Inicio</h1>
       <div className='dentists-container'>
         {/* Aqui deberias renderizar las cards */}
         {state.dentists?.map((dentist) => 
