@@ -1,7 +1,9 @@
 import React from 'react'
-import Form from '../Components/Form'
+import Form from '../components/Form'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+
+// Profe: El estilo dark/light lo dejé de manera global en el componente Layout
 
 const Contact = () => {
   return (

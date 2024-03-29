@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { actions } from "./Actions";
-import { getDentists } from "../../Api/dentists";
 
 const initialState = {
     darkMode: false,
@@ -23,14 +22,16 @@ const appReducer = (state, action) => {
   case actions.REMOVE_FAVORITE:
     const favsRemove = state.favs.filter((fav) => fav.id !== action.payload)
     return {...state, favs: favsRemove}
+  case actions.REMOVE_FAVORITES_ALL:
+    return {...state, favs: []}
   default:
       return state
   }
 }
 
 const getFavsFromLocalStorage = () => {
-  const favs = JSON.parse(localStorage.getItem("favs"))
-  return favs || []
+  const favs = localStorage.getItem("favs")
+  return favs ? JSON.parse(favs) : []
 }
 
 const stateInitializer = () => {
@@ -43,15 +44,6 @@ const ContextProvider = ({children}) => {
   const [state, dispatch] = useReducer(appReducer, initialState, stateInitializer)
 
   const data = { state, dispatch }
-
-  useEffect(() => {
-      const getAllDentists = async () => {
-          const data = await getDentists()
-          dispatch({type: actions.UPDATE_DENTISTS, payload: data})
-      }
-
-      getAllDentists()
-  }, [])
 
   useEffect(() => {
     localStorage.setItem("favs", JSON.stringify(state.favs))

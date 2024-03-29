@@ -27,7 +27,6 @@ const Card = ({ name, username, id, isFavorite }) => {
           <h3>{name}</h3>
         </Link>
         <h4>{username}</h4>
-        <h5>{id}</h5>
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         <button onClick={updateFavs} className={state.darkMode ? "fav-button-dark" : "fav-button"}>

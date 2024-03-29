@@ -1,5 +1,5 @@
-import { useAppStates } from '../Components/utils/global.context'
-import { actions } from '../Components/utils/Actions'
+import { useAppStates } from '../components/utils/global.context'
+import { actions } from '../components/utils/Actions'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import Sun from './Sun'
@@ -13,15 +13,18 @@ const Navbar = () => {
   return (
     <nav>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
+      <h2>DH Odonto</h2>
       <div>
-        <Link to="/home">Inicio</Link>
-        <Link to="/contact">Contacto</Link>
-        <Link to="/favs">Destacados</Link>
+        <div>
+          <Link to="/home">Inicio</Link>
+          <Link to="/contact">Contacto</Link>
+          <Link to="/favs">Destacados</Link>
+        </div>
+        {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
+        <button className="theme-button" onClick={() => dispatch({type: actions.TOGGLE_MODE})}>
+          {state.darkMode ? <Sun />: <Moon />  }
+        </button>
       </div>
-      {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button className={`${state.darkMode ? 'theme-button-dark' : 'theme-button'}`} onClick={() => dispatch({type: actions.TOGGLE_MODE})}>
-        {state.darkMode ? <Sun />: <Moon />  }
-      </button>
     </nav>
   )
 }

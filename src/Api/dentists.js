@@ -1,11 +1,9 @@
-import axios from "axios";
+import { useFetch } from "../helpers/hooks/useFetch";
 
-export const getDentists = async () => {
-  let res = await axios.get("https://jsonplaceholder.typicode.com/users");
-  return res.data;
+export const getDentists = () => {
+  return useFetch("https://jsonplaceholder.typicode.com/users", []);
 };
 
-export const getDentistById = async (id) => {
-  let res = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`);
-  return res.data;
+export const getDentistById = (id) => {
+  return useFetch(`https://jsonplaceholder.typicode.com/users/${id}`, {});
 };

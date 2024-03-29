@@ -13,17 +13,14 @@
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
     margin-bottom: .5rem;
+    text-align: left;
 }
 
 .contact-info button {
-    padding: .75rem;
-    background-color: #212934;
-    color: white;
-    border: none;
-    border-radius: .25rem;
+    padding: .75rem !important;
+    width: 100% !important;
 }

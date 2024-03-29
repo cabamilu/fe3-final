@@ -1,11 +1,11 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ContextProvider from "./Components/utils/global.context";
-import Home from "./Routes/Home";
-import Detail from "./Routes/Detail";
-import Contact from "./Routes/Contact";
-import Favs from "./Routes/Favs"
-import { Layout } from "./Layout/Layout";
+import ContextProvider from "./components/utils/global.context";
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
+import Contact from "./routes/Contact";
+import Favs from "./routes/Favs"
+import { Layout } from "./layout/Layout";
 
 
 function App() {

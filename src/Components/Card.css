@@ -8,7 +8,7 @@
     border: 0.5px solid rgb(136, 136, 136);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    cursor: pointer;
+    gap: .5rem;
 }
   
 .card:hover {
@@ -20,22 +20,35 @@
 }
 
 .fav-button, .fav-button-dark {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
+    background-color: transparent !important;
+    width: 40px !important;
+    height: 40px;
+    box-shadow: none !important;
+}
+
+.fav-button svg {
+    fill: #212934 !important;
+}
+
+.fav-button:hover {
+    border: 1px solid #212934;
 }
 
 .fav-button-dark svg {
-    fill: yellow
+    fill: yellow !important;
+}
+
+.fav-button-dark:hover {
+    border: 0.5px solid rgb(206, 217, 142);
+}
+
+.fav-button-dark svg:hover {
+    fill: #fef9c3 !important;
 }
 
 .detail-button {
     background-color: rgba(136, 136, 136, 0.116);
     padding: 10px;
-    border: none;
     cursor: pointer;
-    border-radius: 5px;
 }  
   

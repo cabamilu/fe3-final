@@ -21,10 +21,12 @@ const Form = () => {
     
     setError(false)
     setSubmitInfo(true)
+    console.log('Contacto Info', contactInfo)
   }
 
   const isValidName = () => {
-    return contactInfo.name.length > 5
+    const nameRegex= /^[\w'\-,.][^0-9_!¡?÷?¿\/\\+=@#$%ˆ&*(){}|~<>;:[\]]{5,}$/
+    return nameRegex.test(contactInfo.name)
   }
 
   const isValidEmail = () => {
