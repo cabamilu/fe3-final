@@ -1,10 +1,23 @@
 .theme-dark main,
 .theme-light main {
-  padding: 0.5rem 0 2rem 0;
+  padding: 7.5rem 0 2rem 0;
 }
 
 .theme-light {
   background-color: rgb(255, 228, 230);
+}
+
+.theme-light nav,
+.theme-dark nav {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.theme-light nav {
+  background-color: rgb(255, 228, 230);
+}
+
+.theme-dark nav {
+  background-color: #212934;
 }
 
 .theme-light main {
@@ -36,6 +49,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 1rem 0;
   cursor: pointer;
+  min-height: 32px;
 }
 
 .theme-light button {

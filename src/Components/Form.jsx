@@ -1,26 +1,27 @@
 import { useState } from 'react'
 import './Form.css'
 
-const Form = () => {
+const Form = ({ onSubmitContactInfo }) => {
   //Aqui deberan implementar el form completo con sus validaciones
   const [contactInfo, setContactInfo] = useState({
     name: '',
     email: '',
   })
   const [error, setError] = useState(false)
-  const [submitInfo, setSubmitInfo] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
     if (!(isValidName() && isValidEmail())) {
       setError(true)
-      setSubmitInfo(false)
       return
     }
 
     setError(false)
-    setSubmitInfo(true)
+    if (typeof onSubmitContactInfo === 'function')
+      onSubmitContactInfo(
+        `Gracias ${contactInfo.name}, te contactaremos cuando antes vía mail`
+      )
     console.log('Contacto Info', contactInfo)
   }
 
@@ -56,9 +57,6 @@ const Form = () => {
         <button type="submit">Enviar</button>
       </form>
       {error && <h3>Por favor verifique su información nuevamente</h3>}
-      {submitInfo && (
-        <h3>{`Gracias ${contactInfo.name}, te contactaremos cuando antes vía mail`}</h3>
-      )}
     </div>
   )
 }

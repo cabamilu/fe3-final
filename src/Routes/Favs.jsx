@@ -6,8 +6,8 @@ import { actions } from '../Components/utils/Actions'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 /*
-* Profe: El estilo dark/light lo dejé de manera global en el componente Layout
-*/
+ * Profe: El estilo dark/light lo dejé de manera global en el componente Layout
+ */
 
 const Favs = () => {
   const { state, dispatch } = useAppStates()

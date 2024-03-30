@@ -5,6 +5,8 @@ nav {
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
+  position: fixed;
+  top: 0;
 }
 
 nav div {

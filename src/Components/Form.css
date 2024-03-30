@@ -4,6 +4,7 @@
   justify-content: space-around;
   width: 300px;
   margin: 0 auto;
+  gap: 0.5rem;
 }
 
 .contact-info input {
@@ -16,7 +17,6 @@
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  margin-bottom: 0.5rem;
   text-align: left;
 }
 
