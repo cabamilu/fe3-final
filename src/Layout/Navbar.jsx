@@ -1,5 +1,5 @@
-import { useAppStates } from '../components/utils/global.context'
-import { actions } from '../components/utils/Actions'
+import { useAppStates } from '../Components/utils/global.context'
+import { actions } from '../Components/utils/Actions'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import Sun from './Sun'
@@ -21,8 +21,11 @@ const Navbar = () => {
           <Link to="/favs">Destacados</Link>
         </div>
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button className="theme-button" onClick={() => dispatch({type: actions.TOGGLE_MODE})}>
-          {state.darkMode ? <Sun />: <Moon />  }
+        <button
+          className="theme-button"
+          onClick={() => dispatch({ type: actions.TOGGLE_MODE })}
+        >
+          {state.darkMode ? <Sun /> : <Moon />}
         </button>
       </div>
     </nav>

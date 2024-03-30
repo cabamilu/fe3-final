@@ -1,26 +1,26 @@
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 300px;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  margin: 0 auto;
+}
 
-  .contact-info input {
-    display: block;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    margin-bottom: .5rem;
-    text-align: left;
+.contact-info input {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .contact-info button {
-    padding: .75rem !important;
-    width: 100% !important;
+  padding: 0.75rem !important;
+  width: 100% !important;
 }

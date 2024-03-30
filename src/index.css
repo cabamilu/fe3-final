@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -28,7 +28,7 @@ main {
   gap: 1rem;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
@@ -61,7 +61,8 @@ table {
   margin: 1rem 0;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;

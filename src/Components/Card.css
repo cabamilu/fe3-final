@@ -1,54 +1,54 @@
 .card {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    padding: 0.5rem;
-    border: 0.5px solid rgb(136, 136, 136);
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    gap: .5rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 0.5rem;
 }
-  
+
 .card:hover {
-    border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(206, 217, 142);
 }
 
 .card img {
-    width: 100%;
+  width: 100%;
 }
 
-.fav-button, .fav-button-dark {
-    background-color: transparent !important;
-    width: 40px !important;
-    height: 40px;
-    box-shadow: none !important;
+.fav-button,
+.fav-button-dark {
+  background-color: transparent !important;
+  width: 40px !important;
+  height: 40px;
+  box-shadow: none !important;
 }
 
 .fav-button svg {
-    fill: #212934 !important;
+  fill: #212934 !important;
 }
 
 .fav-button:hover {
-    border: 1px solid #212934;
+  border: 1px solid #212934;
 }
 
 .fav-button-dark svg {
-    fill: yellow !important;
+  fill: yellow !important;
 }
 
 .fav-button-dark:hover {
-    border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(206, 217, 142);
 }
 
 .fav-button-dark svg:hover {
-    fill: #fef9c3 !important;
+  fill: #fef9c3 !important;
 }
 
 .detail-button {
-    background-color: rgba(136, 136, 136, 0.116);
-    padding: 10px;
-    cursor: pointer;
-}  
-  
+  background-color: rgba(136, 136, 136, 0.116);
+  padding: 10px;
+  cursor: pointer;
+}

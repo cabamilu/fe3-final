@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { getDentistById } from "../api/dentists"
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { getDentistById } from '../Api/dentists'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-// Profe: El estilo dark/light lo dejé de manera global en el componente Layout
+/*
+* Profe: El estilo dark/light lo dejé de manera global en el componente Layout
+*/
 
 const Detail = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
